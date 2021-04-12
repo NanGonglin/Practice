@@ -12,7 +12,7 @@ public class binarySearch {
     public static void main(String[] args) {
         int[] nums={2,3,4,5,6,7,8,9,10};
         int toFind=9;
-        int index = binarySearch(nums, toFind);
+        int index = binarySearch(nums,0,nums.length-1, toFind);
         System.out.println(index);
     }
 
@@ -26,10 +26,8 @@ public class binarySearch {
      * @param toFind 要查找的数
      * @return
      */
-    public static int binarySearch(int[] nums, int toFind){
-        int left=0;
-        int right= nums.length-1;
-        while(left<right){
+    public static int binarySearch(int[] nums, int left,int right,int toFind){
+        while(left<=right){
             int mid=(left+right)/2;
             if(nums[mid]==toFind){
                 return mid;

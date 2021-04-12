@@ -6,7 +6,7 @@ package com.testing.twoSum;
  * @Date 2021/4/12 14:54
  * @Created by 测试园
  */
-public class _167_twoSum {
+public class _167_twoSum1 {
     public static void main(String[] args) {
         int[] nums1={5,25,75};
         nums1=twoSum(nums1, 100);
