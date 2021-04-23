@@ -15,29 +15,14 @@ public class BubbleSort {
             System.out.print(i + " ");
         }
     }
-
-    //    public static int[] bubbleSort(int[] num){
-//        int temp;
-//        for(int i=1;i<num.length;i++){
-//            for(int j=0;j<num.length-i;j++){
-//                if(num[j]>num[j+1]){
-//                    temp=num[j+1];
-//                    num[j+1]=num[j];
-//                    num[j]=temp;
-//                }
-//            }
-//        }
-//
-//        return num;
-//    }
-    public static int[] bubbleSort(int[] nums) {
+    public static int[] bubbleSort(int[] nums){
         int temp;
-        for (int i = 1; i < nums.length; i++) {
-            for (int j = 0; j < nums.length - i; j++) {
-                if (nums[j] > nums[j + 1]) {
-                    temp = nums[j + 1];
-                    nums[j + 1] = nums[j];
-                    nums[j] = temp;
+        for(int i=1;i<nums.length;i++){
+            for(int j=0;j<nums.length-i;j++){
+                if(nums[j+1]<nums[j]){
+                    temp=nums[j+1];
+                    nums[j+1]=nums[j];
+                    nums[j]=temp;
                 }
             }
         }

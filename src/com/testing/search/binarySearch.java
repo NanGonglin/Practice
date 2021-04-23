@@ -11,8 +11,8 @@ import com.sun.media.jfxmediaimpl.HostUtils;
 public class binarySearch {
     public static void main(String[] args) {
         int[] nums={2,3,4,5,6,7,8,9,10};
-        int toFind=9;
-        int index = binarySearch(nums,0,nums.length-1, toFind);
+        int target=11;
+        int index = binarySearch(nums,target);
         System.out.println(index);
     }
 
@@ -23,16 +23,18 @@ public class binarySearch {
      * 如果比较结果是查找的数大，那么从右边继续一分为二查找，
      * 反之，从左边继续一分为二查找
      * @param nums 数组
-     * @param toFind 要查找的数
+     * @param target 要查找的数
      * @return
      */
-    public static int binarySearch(int[] nums, int left,int right,int toFind){
+    public static int binarySearch(int[] nums,int target){
+        int left=0;
+        int right=nums.length-1;
         while(left<=right){
             int mid=(left+right)/2;
-            if(nums[mid]==toFind){
+            if(nums[mid]==target){
                 return mid;
             }
-            else if(nums[mid]<toFind){
+            else if(nums[mid]<target){
                 left=mid+1;
             }
             else{

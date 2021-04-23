@@ -1,4 +1,4 @@
-package com.testing.repeatNum;
+package com.testing.findRepeatNum;
 
 import java.util.HashSet;
 import java.util.Set;

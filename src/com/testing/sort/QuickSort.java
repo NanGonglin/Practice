@@ -14,45 +14,45 @@ public class QuickSort {
             System.out.print(i + " ");
         }
     }
-    public static int[] quick(int[] num,int low,int high){
+    public static int[] quick(int[] nums,int low,int high){
         int left=low;
         int right=high;
-        int base=num[left];
+        int base=nums[left];
         while(left<right){
-            while (left<right){
-                if(num[right]>base){
+            while(left<right){
+                if(nums[right]>base){
                     right--;
                 }
-                else {
+                else{
                     int temp;
-                    temp=num[right];
-                    num[right]=base;
-                    num[left]=temp;
+                    temp=nums[right];
+                    nums[right]=nums[left];
+                    nums[left]=temp;
                     left++;
                     break;
                 }
             }
             while(left<right){
-                if(num[left]<base){
+                if(nums[left]<base){
                     left++;
                 }
-                else{
+                else {
                     int temp;
-                    temp=num[left];
-                    num[left]=base;
-                    num[right]=temp;
+                    temp=nums[left];
+                    nums[left]=nums[right];
+                    nums[right]=temp;
                     right--;
                     break;
                 }
             }
         }
         if(left-1>low){
-            quick(num,low,left-1);
+            quick(nums,low,left-1);
         }
         if(right+1<high){
-            quick(num,right+1,high);
+            quick(nums,right+1,high);
         }
-        return num;
+        return nums;
     }
 
 

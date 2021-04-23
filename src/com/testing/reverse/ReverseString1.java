@@ -6,7 +6,7 @@ package com.testing.reverse;
  * @Date 2021/4/16 14:11
  * @Created by 测试园
  */
-public class ReverseString {
+public class ReverseString1 {
     public static void main(String[] args) {
         String str="sdwefe";
         String string = reverseString(str);

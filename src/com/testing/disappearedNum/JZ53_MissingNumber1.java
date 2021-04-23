@@ -10,7 +10,12 @@ import java.util.Set;
  * @Created by 测试园
  */
 public class JZ53_MissingNumber1 {
-    public int missingNumber(int[] nums) {
+    public static void main(String[] args) {
+        int[] nums={0,1,2,4,5,6,7,8,9};
+        int i = missingNumber(nums);
+        System.out.println(i);
+    }
+    public static int missingNumber(int[] nums) {
         int left=0;
         int right=nums.length-1;
         while (left<=right){

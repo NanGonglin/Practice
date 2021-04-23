@@ -1,8 +1,7 @@
-package com.testing.test;
+package com.testing.test0422;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 /**
  * @Classname SingleNumber
